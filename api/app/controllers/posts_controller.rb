@@ -13,7 +13,7 @@ class PostsController < ApplicationController
     @post = Post.create(
       name: params[:name],
       description: params[:description]
-    )
+    ).save
     render json: @post
   end
 
